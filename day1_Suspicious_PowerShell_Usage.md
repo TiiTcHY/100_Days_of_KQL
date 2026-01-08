@@ -19,11 +19,9 @@
 # MITRE Techniques
 - Execution
 	- T1059.001 PowerShell
-
--Command and Control
-	– T1105 Ingress Tool Transfer
-
-– Defense Evasion
+- Command and Control
+	-  T1105 Ingress Tool Transfer
+ -  Defense Evasion
 	- T1027 Obfuscated/Encoded Commands
 
 # Data Sources
@@ -37,4 +35,5 @@ DeviceProcessEvents
 | where FileName =~ "powershell.exe"
 | where ProcessCommandLine has_any ("-enc", "-encodedcommand", "iwr", "invoke-webrequest", "wget", "download")
 | project Timestamp, DeviceName, AccountName, FileName, ProcessCommandLine
+
 ```
