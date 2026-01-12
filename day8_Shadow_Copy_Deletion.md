@@ -2,7 +2,7 @@
 - Shadow Copy Deletion
 
 # Description
-- 
+- Adversaries executing this technique aim to prevent recovery from backups by deleting or destroying Windows Volume Shadow Copies and other OS-based recovery data prior to or during ransomware encryption.
 
 # References
 - https://media.kasperskycontenthub.com/wp-content/uploads/sites/63/2024/09/16054035/Common-TTPs-of-the-modern-ransomware_low-res.pdf
@@ -45,4 +45,5 @@ DeviceProcessEvents
     InitiatingProcessFileName,
     FolderPath
 | order by Timestamp desc
+
 ```
